@@ -1,0 +1,7 @@
+---
+layout: posts_list
+---
+
+{% for post in page.posts reversed %}
+  {% include post_info.html post=post %}
+{% endfor %}

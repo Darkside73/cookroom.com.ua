@@ -1,15 +1,28 @@
 ---
 layout: default
 ---
-<div class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
-
-  <article class="post-content">
-    {{ content }}
-  </article>
-
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="blog-post">
+        <div>
+          <img src="{{ site.baseurl }}/photos/{{ page.top_photo }}" class="img-responsive" alt="workimg">
+        </div>
+        <ul class="list-inline post-detail">
+            <li><i class="fa fa-calendar"></i> {{ page.date | date: "%b %-d, %Y" }}</li>
+            {% for tag in page.tags %}
+              <li><i class="fa fa-tag"></i> <a href="#">{{tag}}</a></li>
+            {% endfor %}
+            <li><i class="fa fa-comment"></i> <a href="#">6 Comments</a></li>
+        </ul>
+        <h1>{{ page.title }}</h1>
+        <div id="post-content">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-md-offset-1">
+      {% include sidebar.html %}
+    </div>
+  </div>
 </div>

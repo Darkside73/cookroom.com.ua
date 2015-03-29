@@ -7,8 +7,13 @@ description: > # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://cookroom.com.ua" # the base hostname & protocol for your site
+timezone: Europe/Kiev
+paginate: 1
+permalink: /:year/:month/:day/:title.html
+
 twitter_username: jekyllrb
-github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+tags_dir: tag
+exclude: ["*.sublime-*", "tmpdata/"]
