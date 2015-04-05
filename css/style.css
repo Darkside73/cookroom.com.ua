@@ -9,7 +9,7 @@
 }
 .navbar-brand span {
     padding-left: 170px;
-    transition: padding-left 0.7s;
+    transition: padding-left 0.5s;
 }
 #logoImage {
     position: absolute;
@@ -17,11 +17,30 @@
     left: 0;
     width: 200px;
     z-index: 1000;
-    transition: width 0.7s;
+    transition: width 0.5s;
 }
 
 #main-nav.sticky {
     opacity: 0.8;
+}
+
+footer.container {
+    border-top: 1px #ccc dashed;
+    font-size: 120%;
+    margin-top: 80px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+footer a {
+    color: gray;
+}
+footer a:hover {
+    color: #0dbfa4;
+}
+
+.blog-post:last-child {
+    border-bottom: none;
 }
 
 @media (max-width: 768px) {
