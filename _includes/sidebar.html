@@ -38,11 +38,11 @@
       {% for post in site.posts limit:3 %}
         <li>
             <div class="popular-img">
-                <a href="#"> <img src="img/img-7.jpg" class="img-responsive" alt=""></a>
+                <a href="#"> <img src="/img/{{ post.list_photo }}" class="img-responsive" alt=""></a>
             </div>
             <div class="popular-desc">
                 <h5> <a href="#">{{ post.title }}</a></h5>
-                <h6>{{ post.date | date: "%b %-d, %Y" }}</h6>
+                <h6>{{ post.date | localize: "%d %B, %Y" }}</h6>
             </div>
         </li>
       {% endfor %}

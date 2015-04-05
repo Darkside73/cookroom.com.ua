@@ -9,7 +9,7 @@ layout: default
           <img src="{{ site.baseurl }}/photos/{{ page.top_photo }}" class="img-responsive" alt="workimg">
         </div>
         <ul class="list-inline post-detail">
-            <li><i class="fa fa-calendar"></i> {{ page.date | date: "%b %-d, %Y" }}</li>
+            <li><i class="fa fa-calendar"></i> {{ page.date | localize: "%d %B, %Y" }}</li>
             {% for tag in page.tags %}
               <li><i class="fa fa-tag"></i> <a href="#">{{tag}}</a></li>
             {% endfor %}
