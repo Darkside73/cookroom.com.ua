@@ -31,10 +31,12 @@
 
               </div>
               <div class="col-sm-6 hidden-xs text-right">
+                  {% if page.title %}
                   <ol class="breadcrumb">
                       <li><a href="/{{ site.baseurl }}">Главная</a></li>
                       <li>{{ page.title }}</li>
                   </ol>
+                  {% endif %}
               </div>
           </div>
       </div>
