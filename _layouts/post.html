@@ -11,7 +11,10 @@ layout: default
         <ul class="list-inline post-detail">
             <li><i class="fa fa-calendar"></i> {{ page.date | localize: "%d %B, %Y" }}</li>
             {% for tag in page.tags %}
-              <li><i class="fa fa-tag"></i> <a href="#">{{tag}}</a></li>
+              <li>
+                <i class="fa fa-tag"></i>
+                <a href="#">{{ site.data.tags | where: "slug", tag | map: "name" }}</a>
+              </li>
             {% endfor %}
             <li>
               <i class="fa fa-comments"></i>
