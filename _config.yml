@@ -8,7 +8,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://cookroom.com.ua" # the base hostname & protocol for your site
 timezone: Europe/Kiev
-paginate: 1
+paginate: 5
 permalink: /:year/:month/:day/:title.html
 
 twitter_username: jekyllrb
