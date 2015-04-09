@@ -13,6 +13,12 @@
     <div class="col-md-6 margin20">
         <ul class="list-inline post-detail">
             <li><i class="fa fa-calendar"></i> {{ include.post.date | localize: "%d %B, %Y" }}</li>
+            <li>
+                <i class="fa fa-comments"></i>
+                <a href="{{ include.post.url | prepend: site.baseurl }}#disqus_thread" data-disqus-identifier="{{ include.post.url }}"></a>
+            </li>
+        </ul>
+        <ul class="list-inline post-detail">
             {% for tag in post.tags %}
             <li>
                 <i class="fa fa-tag"></i>

@@ -43,6 +43,11 @@ footer a:hover {
     border-bottom: none;
 }
 
+:target {
+    padding-top: 80px;
+    margin-top: -80px;
+}
+
 @media (max-width: 768px) {
     .navbar-brand span {
         padding-left: 70px;
