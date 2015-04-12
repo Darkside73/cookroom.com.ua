@@ -2,6 +2,9 @@
 layout: posts_list
 ---
 
+{% include top_post_info.html %}
 {% for post in paginator.posts %}
-  {% include post_info.html post=post %}
+  {% unless post.top %}
+    {% include post_info.html post=post %}
+  {% endunless %}
 {% endfor %}

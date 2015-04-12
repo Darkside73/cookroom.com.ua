@@ -1,43 +1,25 @@
-  <div class="navbar navbar-default navbar-fixed-top" id="main-nav" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{{site.baseurl}}/">
-              <img src="{{site.baseurl}}/img/logo.png" alt="cookroom.com.ua" id="logoImage">
-              <span>cookroom.com.ua</span>
-            </a>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-              {% for page in site.pages %}
-                {% if page.title and page.menu %}
-                  <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-                {% endif %}
-              {% endfor %}
-            </ul>
-        </div><!--/.nav-collapse -->
-    </div><!--container-->
-  </div>
-
-  <div class="breadcrumb-wrap">
-      <div class="container">
-          <div class="row">
-              <div class="col-sm-6">
-
-              </div>
-              <div class="col-sm-6 hidden-xs text-right">
-                  {% if page.title %}
-                  <ol class="breadcrumb">
-                      <li><a href="/{{ site.baseurl }}">Главная</a></li>
-                      <li>{{ page.title }}</li>
-                  </ol>
-                  {% endif %}
-              </div>
-          </div>
+<div class="navbar navbar-default navbar-fixed-top" id="main-nav" role="navigation">
+  <div class="container">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{site.baseurl}}/">
+            <img src="/img/cherry.png" alt="">
+            cookroom.com.ua
+          </a>
       </div>
-  </div><!--breadcrumbs-->
+      <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            {% for page in site.pages %}
+              {% if page.title and page.menu %}
+                <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+      </div><!--/.nav-collapse -->
+  </div><!--container-->
+</div>
