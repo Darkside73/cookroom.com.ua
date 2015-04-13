@@ -7,11 +7,17 @@
           <p>
             {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
           </p>
-          <p><a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-theme-dark">Читать...</a></p>
+          <p><a href="{{ post.url | prepend: site.baseurl }}#post-content" class="btn btn-theme-dark">Читать...</a></p>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
+          <a href="{{ post.url | prepend: site.baseurl }}">
+              <div class="item-img-wrap">
+                  <img src="{{ site.baseurl }}/photos/{{ post.top_photo }}" class="img-responsive visible-md visible-lg" alt="workimg">
+                  <img src="{{ site.baseurl }}/photos/{{ post.list_photo }}" class="img-responsive visible-xs visible-sm" alt="workimg">
+              </div>
+          </a>
           <ul class="list-inline post-detail">
               <li><i class="fa fa-calendar"></i> {{ post.date | localize: "%d %B, %Y" }}</li>
               <li>
@@ -27,11 +33,6 @@
                 </li>
             {% endfor %}
           </ul>
-          <a href="{{ post.url | prepend: site.baseurl }}">
-              <div class="item-img-wrap">
-                  <img src="{{ site.baseurl }}/photos/{{ post.top_photo }}" class="img-responsive" alt="workimg">
-              </div>
-          </a><!--work link-->
       </div>
     </div>
 </div>
