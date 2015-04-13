@@ -56,6 +56,10 @@ footer a:hover {
     text-transform: none;
     font-size: 200%;
 }
+.ingredients {
+    color: #858d91;
+    font-style: italic;
+}
 
 @media (max-width: 768px) {
     .navbar-brand span {
