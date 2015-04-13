@@ -57,6 +57,10 @@ footer a:hover {
     font-size: 200%;
 }
 .ingredients {
+    margin-right: 20px;
+}
+.ingredients ul {
+    padding-left: 20px;
     color: #858d91;
     font-style: italic;
 }
