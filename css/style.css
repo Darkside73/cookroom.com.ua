@@ -58,14 +58,22 @@ footer a:hover {
     width: 86px;
 }
 
+.share-post .pull-left {
+    margin-right: 10px;
+}
+
 #post-content p:first-child {
     font-size: 115%;
+    text-align: justify;
 }
 #post-content p:first-child::first-letter {
     color: #C43247;
     font-size: 200%;
     font-weight: bold;
     margin-left: 10px;
+}
+#post-content p:first-child span.hidden-xs {
+    display: inline !important;
 }
 #post-content .ingredients {
     margin-right: 20px;
