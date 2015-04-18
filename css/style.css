@@ -58,6 +58,9 @@ footer a:hover {
     width: 86px;
 }
 
+.share-post {
+    margin-top: 60px;
+}
 .share-post .pull-left {
     margin-right: 10px;
 }
