@@ -1,5 +1,4 @@
-{% assign top_posts = site.posts | where: "top", true %}
-{% for post in top_posts limit:1 %}
+{% for post in site.posts limit:1 %}
 <div class="blog-post top-post">
     <div class="row">
       <div class="col-md-12">

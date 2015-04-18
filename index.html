@@ -3,8 +3,6 @@ layout: posts_list
 ---
 
 {% include top_post_info.html %}
-{% for post in paginator.posts %}
-  {% unless post.top %}
-    {% include post_info.html post=post %}
-  {% endunless %}
+{% for post in paginator.posts offset:1 %}
+  {% include post_info.html post=post %}
 {% endfor %}
