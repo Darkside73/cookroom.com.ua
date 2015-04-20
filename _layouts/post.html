@@ -13,7 +13,7 @@ layout: default
             {% for tag in page.tags %}
               <li>
                 <i class="fa fa-tag"></i>
-                <a href="#">{{ site.data.tags | where: "slug", tag | map: "name" }}</a>
+                <a href="{{ site.baseurl }}/tag/{{ tag }}">{{ site.data.tags | where: "slug", tag | map: "name" }}</a>
               </li>
             {% endfor %}
             <li>
