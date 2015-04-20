@@ -29,7 +29,7 @@
         <p>
             {{ include.post.excerpt | remove: '<p>' | remove: '</p>' }}
         </p>
-        <p><a href="{{ include.post.url | prepend: site.baseurl }}" class="btn btn-theme-dark">Читать...</a></p>
+        <p><a href="{{ include.post.url | prepend: site.baseurl }}#post-content" class="btn btn-theme-dark">Читать...</a></p>
     </div>
   </div>
 </div>
