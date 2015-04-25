@@ -87,6 +87,10 @@ footer a:hover {
     color: #858d91;
     font-style: italic;
 }
+#post-content .ingredients p {
+    margin-bottom: 0;
+    margin-left: 20px;
+}
 
 @media (max-width: 768px) {
     .navbar-brand span {
