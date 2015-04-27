@@ -65,11 +65,11 @@ footer a:hover {
     margin-right: 10px;
 }
 
-#post-content p:first-child {
+#post-content>p:first-child {
     font-size: 115%;
     text-align: justify;
 }
-#post-content p:first-child::first-letter {
+#post-content>p:first-child::first-letter {
     color: #C43247;
     font-size: 200%;
     font-weight: bold;
@@ -90,6 +90,9 @@ footer a:hover {
 #post-content .ingredients p {
     margin-bottom: 0;
     margin-left: 20px;
+}
+#post-content .ingredients ul+p {
+    margin-top: 10px;
 }
 
 @media (max-width: 768px) {
