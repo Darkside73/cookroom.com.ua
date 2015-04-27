@@ -65,6 +65,14 @@ footer a:hover {
     margin-right: 10px;
 }
 
+.img-wrapper {
+    margin: 0 -15px;
+    text-align: center;
+}
+.img-wrapper img {
+    display: block;
+}
+
 #post-content>p:first-child {
     font-size: 115%;
     text-align: justify;
