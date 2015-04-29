@@ -10,3 +10,5 @@
   name: Кексы и маффины
 - slug: pies
   name: Пироги
+- slug: deserts
+  name: Десерты
