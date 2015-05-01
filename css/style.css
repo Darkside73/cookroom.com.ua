@@ -119,6 +119,9 @@ footer a:hover {
     .img-wrapper img {
         display: block;
     }
+    #post-content .ingredients div.col-md-*:not(:first-child) > p {
+        margin-top: 10px;
+    }
 }
 @media (min-width: 993px) {
     :target {
