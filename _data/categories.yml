@@ -12,3 +12,5 @@
   name: Пироги
 - slug: deserts
   name: Десерты
+- slug: cakes
+  name: Торты

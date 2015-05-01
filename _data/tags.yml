@@ -2,3 +2,9 @@
   name: мука
 - slug: cheese
   name: творог
+- slug: yeast baking
+  name: дрожжевая выпечка
+- slug: berries
+  name: ягоды
+- slug: chocolate
+  name: шоколад
