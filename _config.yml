@@ -11,7 +11,8 @@ timezone: Europe/Kiev
 paginate: 5
 permalink: /:year/:month/:day/:title.html
 
-twitter_username: jekyllrb
+gems:
+  - jekyll-sitemap
 
 # Build settings
 markdown: kramdown
