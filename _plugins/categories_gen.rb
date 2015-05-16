@@ -13,6 +13,7 @@ module Jekyll
       category_data = site.data['categories'].find { |c| c['slug'] == category }
       raise "Add category #{category} to _data/categories.yml" unless category_data
       self.data['title'] = category_data['name']
+      self.data['description'] = category_data['description']
     end
   end
 

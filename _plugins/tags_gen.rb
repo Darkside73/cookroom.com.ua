@@ -13,6 +13,7 @@ module Jekyll
       tag_data = site.data['tags'].find { |t| t['slug'] == tag }
       raise "Add tag #{tag} to _data/tags.yml" unless tag_data
       self.data['title'] = "Посты, отмеченные тегом &ldquo;#{tag_data['name']}&rdquo;"
+      self.data['description'] = tag_data['description']
     end
   end
 

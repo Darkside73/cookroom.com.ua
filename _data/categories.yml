@@ -1,5 +1,6 @@
 - slug: breakfast
   name: Завтраки
+  description: Завтраки описание
 - slug: biscuit
   name: Печенье
 - slug: brownies
