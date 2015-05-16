@@ -4,12 +4,16 @@ layout: default
 <div class="container">
   <div class="row">
     <div class="col-md-8">
-      <div class="blog-post">
+      <div id="blog-post" class="blog-post" itemscope itemtype="http://schema.org/BlogPosting">
         <div class="img-wrapper">
-          <img src="{{ site.baseurl }}/photos/{{ page.top_photo }}" class="img-responsive" alt="workimg">
+          <img itemprop="thumbnailUrl" src="{{ site.baseurl }}/photos/{{ page.top_photo }}" class="img-responsive" alt="workimg">
         </div>
         <ul class="list-inline post-detail">
-            <li><i class="fa fa-calendar"></i> {{ page.date | localize: "%d %B, %Y" }}</li>
+            <li>
+              <i class="fa fa-calendar"></i>
+              <meta itemprop="datePublished" content="{{ page.date | date: "%Y-%m-%d" }}T{{ page.date | date: "%H:%M" }}Z"/>
+              {{ page.date | localize: "%d %B, %Y" }}
+            </li>
             {% for tag in page.tags %}
               <li>
                 <i class="fa fa-tag"></i>
@@ -21,8 +25,8 @@ layout: default
               <a href="#disqus_thread" data-disqus-identifier="{{ page.url }}"></a>
             </li>
         </ul>
-        <h1>{{ page.title }}</h1>
-        <div id="post-content">
+        <h1 itemprop="name headline">{{ page.title }}</h1>
+        <div id="post-content" itemprop="articleBody">
           {{ content }}
         </div>
         <div class="share-post">
