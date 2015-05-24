@@ -69,11 +69,11 @@ footer a:hover {
     margin-right: 10px;
 }
 
-#post-content>p:first-child {
+#blog-post #post-content>p:first-child {
     font-size: 115%;
     text-align: justify;
 }
-#post-content>p:first-child::first-letter {
+#blog-post #post-content>p:first-child::first-letter {
     color: #C43247;
     font-size: 200%;
     font-weight: bold;
