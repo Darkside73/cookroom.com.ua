@@ -3,8 +3,6 @@
   description: Завтраки описание
 - slug: biscuit
   name: Печенье
-- slug: brownies
-  name: Брауни
 - slug: yeast-baking
   name: Дрожжевая выпечка
 - slug: cakes-and-maffins
