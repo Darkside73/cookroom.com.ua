@@ -10,11 +10,16 @@ module Jekyll
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'category_index.html')
       self.data['category'] = category
-      category_data = site.data['categories'].find { |c| c['slug'] == category }
-      raise "Add category #{category} to _data/categories.yml" unless category_data
-      self.data['title'] = category_data['name']
-      self.data['description'] = category_data['description']
+      @category_data = site.data['categories'].find { |c| c['slug'] == category }
+      raise "Add category #{category} to _data/categories.yml" unless @category_data
+      self.data['title'] = @category_data['name']
+      self.data['description'] = @category_data['description']
     end
+
+    def template
+      "#{@category_data['slug']}/index.html"
+    end
+
   end
 
   class CategoryGenerator < Generator
