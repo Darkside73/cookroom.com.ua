@@ -2,9 +2,19 @@
   name: мука
 - slug: cheese
   name: творог
-- slug: yeast baking
+- slug: yeast-baking
   name: дрожжевая выпечка
 - slug: berries
   name: ягоды
 - slug: chocolate
   name: шоколад
+- slug: sweet-baking
+  name: сладкая выпечка
+- slug: without-flour
+  name: без муки
+- slug: whole-wheat-flour
+  name: цельнозерновая мука
+- slug: nuts
+  name: орехи
+- slug: savory-pastries
+  name: несладкая выпечка
