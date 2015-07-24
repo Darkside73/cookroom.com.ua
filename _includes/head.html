@@ -16,7 +16,9 @@
     <meta property="og:type" content="article" />
     <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/photos/{{ page.top_photo }}">
     <meta property="og:image:type" content="image/jpeg">
+    <meta class="swiftype" name="image" data-type="enum" content="{{ site.url }}{{ site.baseurl }}/photos/{{ page.list_photo }}">
   {% endif %}
+  <meta class="swiftype" name="title" data-type="string" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 
   <!-- Bootstrap -->
   <link href="{{ "/css/bootstrap/css/bootstrap.min.css" | prepend: site.baseurl }}" rel="stylesheet">

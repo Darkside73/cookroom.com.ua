@@ -6,6 +6,17 @@ h1 {
     height: 115px;
 }
 
+.navbar input.search {
+    width:150px;
+}
+.navbar button.search {
+    width:36px;
+    font-size: 13px;
+}
+.st-default-autocomplete {
+    width: 250px !important;
+}
+
 a.navbar-brand {
     font-family: Lobster;
     text-transform: none;

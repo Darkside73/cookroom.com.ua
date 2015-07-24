@@ -748,10 +748,6 @@ input[type="color"],
     -moz-box-shadow: none;
     box-shadow: none;
     background: #FFF;
-    -webkit-transition: all 200ms ease-in;
-    -o-transition: all 200ms ease-in;
-    -moz-transition: all 200ms ease-in;
-    transition: all 200ms ease-in;
 }
 textarea:focus,
 input[type="text"]:focus,

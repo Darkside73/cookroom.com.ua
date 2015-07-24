@@ -13,6 +13,12 @@
           </a>
       </div>
       <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="search form-control st-default-search-input" placeholder="Поиск по сайту">
+            </div>
+            <button type="submit" class="search btn btn-default"><i class="fa fa-search"></i></button>
+          </form>
           <ul class="nav navbar-nav navbar-right">
             {% for page in site.pages %}
               {% if page.title and page.menu %}
