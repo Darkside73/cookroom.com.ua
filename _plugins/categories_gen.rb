@@ -36,7 +36,7 @@ module Jekyll
 
     def write_category_index(site, dir, category)
       index = CategoryIndex.new(site, site.source, dir, category)
-      index.data['posts'] = site.posts.select { |post| post.categories.include? category }
+      index.data['posts'] = site.posts.docs.select { |post| post['categories'].include? category }
       index.render(site.layouts, site.site_payload)
       index.write(site.dest)
       site.pages << index

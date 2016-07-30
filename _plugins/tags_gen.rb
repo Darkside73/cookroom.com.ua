@@ -31,7 +31,7 @@ module Jekyll
 
     def write_tag_index(site, dir, tag)
       index = TagIndex.new(site, site.source, dir, tag)
-      index.data['posts'] = site.posts.select { |post| post.tags.include? tag }
+      index.data['posts'] = site.posts.docs.select {|post| post['tags'].include? tag }
       index.render(site.layouts, site.site_payload)
       index.write(site.dest)
       site.pages << index

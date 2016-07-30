@@ -15,8 +15,9 @@ permalink: /:year/:month/:day/:title.html
 
 gems:
   - jekyll-sitemap
+  - jekyll-paginate
 
 # Build settings
 markdown: kramdown
 tags_dir: tag
-exclude: ["*.sublime-*", "tmpdata/"]
+exclude: ["*.sublime-*", "tmpdata/", "Gemfile*"]
