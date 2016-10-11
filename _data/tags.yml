@@ -18,3 +18,7 @@
   name: орехи
 - slug: savory-pastries
   name: несладкая выпечка
+- slug: fruits
+  name: фрукты 
+- slug: apples
+  name: яблоки 
