@@ -22,3 +22,5 @@
   name: фрукты 
 - slug: apples
   name: яблоки 
+ - slug: pumkin
+  name: тыква 
