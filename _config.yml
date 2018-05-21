@@ -8,7 +8,7 @@ description: >
   Многие из рецептов с пошаговыми фото и подробными описаниями.
   Здесь можно увидеть не только поверенные рецепты выпечки, но и новые эксперименты.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://cookroom.com.ua" # the base hostname & protocol for your site
+url: "https://cookroom.com.ua" # the base hostname & protocol for your site
 timezone: Europe/Kiev
 paginate: 5
 permalink: /:year/:month/:day/:title.html
