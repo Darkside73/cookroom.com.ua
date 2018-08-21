@@ -1,0 +1,49 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.5.0
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "Gemfile.lock" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run:
+          name: install dependencies
+          command: |
+            bundle install --jobs=4 --retry=3 --path vendor/bundle
+
+      - save_cache:
+          paths:
+            - ./vendor/bundle
+          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+
+      - run:
+          name: jekyll build
+          command: |
+            mkdir ~/jekyll-build
+            cd ~/repo && bundle exec jekyll build -d ~/jekyll-build
+
+      - run:
+          name: deploy
+          command: |
+            mkdir ~/gh-pages
+            cd ~/gh-pages
+            git config --global user.email deploy@circleci
+            git config --global user.name deploy
+            git init
+            git remote add --fetch origin git@github.com:Darkside73/cookroom.com.ua.git
+            git checkout gh-pages
+            git rm --quiet -rf --ignore-unmatch .
+            cp -r ~/jekyll-build/* ~/gh-pages
+            git add .
+            git commit --quiet --allow-empty -m "Deploy to GitHub pages [ci skip]"
+            git push --force --quiet origin gh-pages
+
